@@ -1,7 +1,9 @@
 import React from 'react';
 // import flats from '../../data/flats';
 import fetchFlats from './fetchFlats';
-import FlatsList from './FlatsList';
+import FlatList from './FlatList';
+import FlatMap from './FlatMap';
+import ReactMapboxGl from 'react-mapbox-gl';
 import '../../assets/stylesheets/application.scss';
 
 export default function App() {
@@ -11,7 +13,10 @@ export default function App() {
 
   console.log(flats);
   return (
-    <FlatsList flats={flats} />
+    <>
+      <FlatList flats={flats} />
+      <FlatMap />
+    </>
   );
 }
 
