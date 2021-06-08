@@ -1,18 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import '../assets/stylesheets/application.scss';
-
-const Hello = ({ name }) => {
-  return (
-    <div>
-      Hello,
-      {name}
-    </div>
-  );
-};
+// eslint-disable-next-line import/extensions
+import App from './components/App.jsx';
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(<App />, root);
 }
