@@ -3,8 +3,8 @@ import React from 'react';
 import fetchFlats from './fetchFlats';
 import FlatList from './FlatList';
 import FlatMap from './FlatMap';
-import ReactMapboxGl from 'react-mapbox-gl';
 import '../../assets/stylesheets/application.scss';
+
 
 export default function App() {
   const url = 'https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json';
@@ -13,18 +13,9 @@ export default function App() {
 
   console.log(flats);
   return (
-    <>
+    <div>
       <FlatList flats={flats} />
       <FlatMap />
-    </>
+    </div>
   );
 }
-
-// const App = ({ name }) => {
-//   return (
-//     <div>
-//       Hello,
-//       {name}
-//     </div>
-//   );
-// };
