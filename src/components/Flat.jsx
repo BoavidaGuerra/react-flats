@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function Flat({ title, image, price, priceCurr }) {
+
+export default function Flat({
+  title,
+  image,
+  price,
+  priceCurr
+}) {
   return (
     <div className="card">
       <img src={image} alt="flat" />
