@@ -5,7 +5,7 @@ import FlatMarker from './FlatMarker';
 
 const Map = ReactMapboxGl({ accessToken: "pk.eyJ1IjoibWFkYWxlbmFnIiwiYSI6ImNrZ20yYzB4cTFuamwydHRlaXZiajEzZTMifQ.e4JeBXRQv5VLiF0oBqIfcA" });
 
-export default function FlatMap({ flats }) {
+export default function FlatMap({ flats, selected }) {
   return (
     <div className="map-container">
       <Map
@@ -21,7 +21,7 @@ export default function FlatMap({ flats }) {
             coordinates={[flat.lng, flat.lat]}
             anchor="bottom"
           >
-            <FlatMarker price={flat.price} />
+            <FlatMarker price={flat.price} selected={flat.id === selected} />
           </Marker>
         ))}
       </Map>

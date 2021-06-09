@@ -2,13 +2,28 @@ import React from 'react';
 
 
 export default function Flat({
+  id,
   title,
   image,
   price,
-  priceCurr
+  priceCurr,
+  onSelect
 }) {
+  const handleClick = () => {
+    onSelect(id);
+  };
+
+  const handleKeyPress = () => {
+    onSelect(id);
+  };
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={handleClick}
+      onKeyPress={handleKeyPress}
+      tabIndex="0"
+      role="button"
+    >
       <img src={image} alt="flat" />
       <div className="card-description" title={title}>
         <p>
